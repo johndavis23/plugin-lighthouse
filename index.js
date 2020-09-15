@@ -8,21 +8,15 @@ const runAudit = require('./runAudit');
 const Aggregator = require('./aggregator');
 
 const DEFAULT_SINGLE_RUN_SUMMARY_METRICS = [
-  'categories.seo.score',
-  'categories.performance.score',
-  'categories.pwa.score',
-  'categories.accessibility.score',
-  'categories.best-practices.score',
-  'audits.interactive'
+  'audits.interactive',
+  'audits.largest-contentful-paint',
+  'audits.cumulative-layout-shift'
 ];
 
 const DEFAULT_MULTI_RUN_SUMMARY_METRICS = [
-  'categories.seo.*',
-  'categories.performance.*',
-  'categories.pwa.*',
-  'categories.accessibility.*',
-  'categories.best-practices.*',
-  'audits.interactive'
+  'audits.interactive',
+  'audits.largest-contentful-paint',
+  'audits.cumulative-layout-shift'
 ];
 
 const defaultConfig = {
