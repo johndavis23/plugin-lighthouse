@@ -12,7 +12,8 @@ const DEFAULT_SINGLE_RUN_SUMMARY_METRICS = [
   'categories.performance.score',
   'categories.pwa.score',
   'categories.accessibility.score',
-  'categories.best-practices.score'
+  'categories.best-practices.score',
+  'audits.interactive'
 ];
 
 const DEFAULT_MULTI_RUN_SUMMARY_METRICS = [
@@ -20,7 +21,8 @@ const DEFAULT_MULTI_RUN_SUMMARY_METRICS = [
   'categories.performance.*',
   'categories.pwa.*',
   'categories.accessibility.*',
-  'categories.best-practices.*'
+  'categories.best-practices.*',
+  'audits.interactive'
 ];
 
 const defaultConfig = {
@@ -153,9 +155,9 @@ module.exports = {
               lighthouseFlags: this.lighthouseFlags,
               lighthousePreScript: this.lighthousePreScript
             });
-            log.verbose('Result from Lighthouse:%:2j', result.lhr);
+            log.debug('Result from Lighthouse:%:2j', result.lhr);
             this.aggregator.addToAggregate(result.lhr);
-            log.verbose('Report from Lighthouse:%:2j', result.report);
+            log.debug('Report from Lighthouse:%:2j', result.report);
             queue.postMessage(
               make('lighthouse.report', result.report, {
                 url,
