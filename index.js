@@ -10,13 +10,15 @@ const Aggregator = require('./aggregator');
 const DEFAULT_SINGLE_RUN_SUMMARY_METRICS = [
   'audits.interactive',
   'audits.largest-contentful-paint',
-  'audits.cumulative-layout-shift'
+  'audits.cumulative-layout-shift',
+  'audits.total-blocking-time'
 ];
 
 const DEFAULT_MULTI_RUN_SUMMARY_METRICS = [
   'audits.interactive',
   'audits.largest-contentful-paint',
-  'audits.cumulative-layout-shift'
+  'audits.cumulative-layout-shift',
+  'audits.total-blocking-time'
 ];
 
 const defaultConfig = {
